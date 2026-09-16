@@ -21,8 +21,8 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
         className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        {/* Brand Logo + Title + Amharic Slogan */}
-        <Link href="#home" className="flex items-center gap-3 group">
+        {/* Brand Logo + Title + Amharic Slogan (Visible on both Mobile & Desktop) */}
+        <Link href="#home" className="flex items-center gap-2.5 group">
           <Image
             src="/img/tenalogo.png"
             alt="Tena Organics Logo"
@@ -32,11 +32,11 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
             priority
           />
           
-          <div className="hidden sm:flex flex-col">
-            <span className="font-serif text-xl font-bold leading-tight tracking-tight text-brand-green">
+          <div className="flex flex-col">
+            <span className="font-serif text-base font-bold leading-tight tracking-tight text-brand-green sm:text-xl">
               Tena Organics
             </span>
-            <span className="text-[10px] font-medium tracking-wide text-amber-800/80">
+            <span className="text-[9px] font-medium tracking-wide text-amber-800/80 sm:text-[10px]">
               ንጹህ • ተፈጥሯዊ • ሙሉ ጤና
             </span>
           </div>
