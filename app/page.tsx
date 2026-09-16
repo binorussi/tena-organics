@@ -1,6 +1,7 @@
 import { PRODUCTS } from "@/data/products";
 import { redis, productStockKey } from "@/lib/redis";
 import { CartExperience } from "@/components/CartExperience";
+import TelegramProvider from "@/components/TelegramProvider";
 
 export default async function HomePage() {
   const pipeline = redis.pipeline();
@@ -15,8 +16,10 @@ export default async function HomePage() {
   }));
 
   return (
-    <main className="min-h-screen bg-slate-50">
-      <CartExperience products={productsWithStock} />
-    </main>
+    <TelegramProvider>
+      <main className="min-h-screen bg-slate-50">
+        <CartExperience products={productsWithStock} />
+      </main>
+    </TelegramProvider>
   );
 }
