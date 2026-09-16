@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "cinnamon-sticks",
-    name: "Ceylon Cinnamon (ቀረፋ)",
+    name: "Cinnamon (ቀረፋ)",
     category: "spices",
     tagline: "Pure Natural Spice Sticks",
     benefit: "Helps maintain healthy blood sugar levels",

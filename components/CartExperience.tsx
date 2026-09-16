@@ -124,9 +124,11 @@ export function CartExperience({ products }: CartExperienceProps) {
         </button>
       )}
 
-      <div onClick={() => setIsCartOpen(true)} className="cursor-pointer">
-        <Navbar cartCount={totalItemsCount} />
-      </div>
+      {/* Clean Navbar Integration without wrapping div */}
+      <Navbar 
+        cartCount={totalItemsCount} 
+        onOpenCart={() => setIsCartOpen(true)} 
+      />
 
       <Hero />
       <WhyTena />
