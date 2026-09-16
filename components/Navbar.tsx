@@ -36,6 +36,9 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
             <span className="font-serif text-base font-bold leading-tight tracking-tight text-brand-green sm:text-xl">
               Tena Organics
             </span>
+            <span className="text-[10px] font-medium italic text-amber-900/60 sm:text-xs">
+              by Mastewal
+            </span>
             <span className="text-[9px] font-medium tracking-wide text-amber-800/80 sm:text-[10px]">
               ንጹህ • ተፈጥሯዊ • ሙሉ ጤና
             </span>
