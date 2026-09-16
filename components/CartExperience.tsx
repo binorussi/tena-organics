@@ -86,7 +86,7 @@ export function CartExperience({ products }: CartExperienceProps) {
     );
 
     if (res.success) {
-      alert("Order placed successfully! Telegram alert sent and stock updated.");
+      alert("Order placed successfully! Thank you for shopping with us.");
       setCart([]);
       setCustomerName("");
       setCustomerPhone("");
