@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-green: #143823;
+    --brand-gold: #D97706;
+    --brand-gold-hover: #B45309;
+    --brand-cream: #FAFAF7;
+    --brand-sage: #E8EFE9;
+  }
+
+  body {
+    background-color: var(--brand-cream);
+    color: #1e293b;
+  }
+}

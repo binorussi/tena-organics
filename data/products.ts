@@ -1,0 +1,150 @@
+export interface Product {
+  id: string;
+  name: string;
+  category: "herbal-teas" | "powders" | "spices" | "seeds-nuts";
+  tagline: string;
+  benefit: string;
+  price: number;
+  image: string;
+  badge?: string;
+}
+
+export const PRODUCTS: Product[] = [
+  {
+    id: "hibiscus-tea",
+    name: "Hibiscus Tea (ከርከዴ)",
+    category: "herbal-teas",
+    tagline: "Rich in antioxidants & Vitamin C",
+    benefit: "Lowers blood pressure naturally & aids digestion",
+    price: 1000.00,
+    image: "/img/hibiscus.webp",
+    badge: "Best Seller",
+  },
+  {
+    id: "moringa-powder",
+    name: "Moringa Powder (ሽፈራው)",
+    category: "powders",
+    tagline: "Nature's multivitamin packed with vital nutrients",
+    benefit: "Boosts energy, metabolism & immune health",
+    price: 500.00,
+    image: "/img/moringa.webp",
+  },
+  {
+    id: "star-anise",
+    name: "Star Anise (ስታር አኒስ)",
+    category: "spices",
+    tagline: "Aromatic Whole Spice",
+    benefit: "Rich aromatic flavor & natural digestive support",
+    price: 1000.00,
+    image: "/img/star-anise.webp",
+    badge: "New Arrival",
+  },
+  {
+    id: "cinnamon-sticks",
+    name: "Ceylon Cinnamon (ቀረፋ)",
+    category: "spices",
+    tagline: "Pure Natural Spice Sticks",
+    benefit: "Helps maintain healthy blood sugar levels",
+    price: 800.00,
+    image: "/img/cinnamon.webp",
+  },
+  {
+    id: "chia-seeds",
+    name: "Chia Seeds (ቺያ ሲድ)",
+    category: "seeds-nuts",
+    tagline: "Omega-3 Superseed",
+    benefit: "High in fiber, plant protein & healthy fats",
+    price: 800.00,
+    image: "/img/chia.webp",
+  },
+  {
+    id: "almonds",
+    name: "Almonds (አልመንድ)",
+    category: "seeds-nuts",
+    tagline: "Protein Packed & Nutritious",
+    benefit: "High in Vitamin E, antioxidants & heart-healthy fats",
+    price: 1000.00,
+    image: "/img/almonds.webp",
+  },
+  {
+    id: "pistachios",
+    name: "Pistachios (ፒስታችዮ)",
+    category: "seeds-nuts",
+    tagline: "Protein Packed & Nutritious",
+    benefit: "High in Vitamin E, antioxidants & heart-healthy fats",
+    price: 1300.00,
+    image: "/img/pistachios.webp",
+  },
+  {
+    id: "golden-raisins",
+    name: "Golden Raisins (ወርቃማ ዘቢብ)",
+    category: "seeds-nuts",
+    tagline: "Naturally Sweet & Fiber Rich",
+    benefit: "Supports digestion, iron levels & natural energy",
+    price: 800.00,
+    image: "/img/raisins.webp",
+  },
+  {
+    id: "fennel-seeds",
+    name: "Fennel Seeds (የእንስላል ፍሬ)",
+    category: "spices",
+    tagline: "Aromatic Digestive Seed",
+    benefit: "Relieves bloating, supports gut health & freshens breath",
+    price: 800.00,
+    image: "/img/fennel.webp",
+  },
+  {
+    id: "cashew",
+    name: "Cashew (ካሹ)",
+    category: "seeds-nuts",
+    tagline: "Creamy & Nutritious Supernut",
+    benefit: "Rich in healthy fats, magnesium & essential minerals",
+    price: 1100.00,
+    image: "/img/cashews.webp",
+  },
+  {
+    id: "pumpkin-seeds",
+    name: "Pumpkin Seeds (የዱባ ፍሬ)",
+    category: "seeds-nuts",
+    tagline: "Zinc & Magnesium Booster",
+    benefit: "Supports heart health, sleep quality & immune system",
+    price: 1000.00,
+    image: "/img/pumpkin-seeds.webp",
+  },
+  {
+    id: "dates",
+    name: "Dates (ቴምር)",
+    category: "seeds-nuts",
+    tagline: "Natural Energy Sweetener",
+    benefit: "Rich in potassium, fiber & natural stamina boosters",
+    price: 700.00,
+    image: "/img/dates.webp",
+  },
+  {
+    id: "turmeric",
+    name: "Turmeric (እርድ)",
+    category: "powders",
+    tagline: "Golden Anti-Inflammatory Root",
+    benefit: "Supports joint health, immunity & natural detox",
+    price: 600.00,
+    image: "/img/turmeric.webp",
+  },
+  {
+    id: "green-tea",
+    name: "Green Tea (አረንጓዴ ሻይ)",
+    category: "herbal-teas",
+    tagline: "Metabolism & Focus Infusion",
+    benefit: "Rich in EGCG antioxidants to boost metabolism and vitality",
+    price: 1500.00,
+    image: "/img/green-tea.webp",
+  },
+  {
+    id: "chamomile-tea",
+    name: "Chamomile Tea (ካሞሜላ ሻይ)",
+    category: "herbal-teas",
+    tagline: "Calming & Restorative Herbal Tea",
+    benefit: "Promotes restful sleep, stress relief & smooth digestion",
+    price: 1200.00,
+    image: "/img/chamomile-tea.webp",
+  }
+];
