@@ -282,7 +282,7 @@ export function CartExperience({ products }: CartExperienceProps) {
                   onClick={handleCheckout}
                   className="w-full bg-brand-gold hover:bg-brand-gold-hover text-white py-2.5 rounded-lg font-bold transition-colors text-sm shadow-md"
                 >
-                  Checkout via Telegram
+                  Checkout
                 </button>
               </div>
             )}
