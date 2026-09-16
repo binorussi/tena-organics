@@ -8,12 +8,19 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   title: "Tena Organic Health | Pure Natural Wellness",
   description: "Shop certified organic teas, powders, and herbal remedies crafted for natural wellbeing.",
+  icons: {
+    icon: "/img/favicon.ico",
+    shortcut: "/img/favicon.ico",
+    apple: "/img/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

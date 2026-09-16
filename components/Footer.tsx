@@ -1,37 +1,56 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Send, Twitter } from "lucide-react";
+"use client";
 
-const socials = ["Instagram @tenaorganics", "Facebook /tenaorganics", "Twitter @tena_health", "Pinterest /tenaorganics"];
+import React from "react";
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-brand-green py-16 text-brand-cream">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
+    <footer className="bg-brand-green text-amber-50/90 pt-12 pb-6 border-t border-emerald-900">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-emerald-800/60">
+        
+        {/* Brand Info */}
         <div>
-          <h2 className="font-serif text-3xl font-bold">Tena Organic Health</h2>
-          <p className="mt-3 text-brand-cream/80">Organic • Certified • Trusted by Nature</p>
-          <form className="mt-8 flex max-w-md overflow-hidden rounded-full bg-white p-1" aria-label="Newsletter subscription">
-            <input className="min-w-0 flex-1 px-4 text-gray-800 outline-none" placeholder="Your email" type="email" />
-            <button className="rounded-full bg-brand-gold px-5 py-3 font-semibold text-white hover:bg-brand-goldHover transition-colors" type="submit">
-              <Send size={18} />
-            </button>
-          </form>
+          <h3 className="font-serif text-xl font-bold text-amber-100 mb-3">Tena Organics</h3>
+          <p className="text-xs text-amber-100/70 leading-relaxed">
+            Your source for pure, organic health products, spices, and natural wellness ingredients in Ethiopia.
+          </p>
         </div>
-        <div className="space-y-3 text-brand-cream/85">
-          <h3 className="font-serif text-xl font-semibold text-white">Contact Info</h3>
-          <p className="flex gap-2"><MapPin size={18} /> <a href="https://www.tenaorganics.com">www.tenaorganics.com</a></p>
-          <p className="flex gap-2"><Mail size={18} /> hello@tenaorganics.com</p>
-          <p className="flex gap-2"><Phone size={18} /> +251 913349783</p>
-        </div>
+
+        {/* Quick Links */}
         <div>
-          <h3 className="font-serif text-xl font-semibold text-white">Social Links</h3>
-          <div className="mt-4 space-y-2 text-brand-cream/85">
-            {socials.map((social, index) => (
-              <p key={social} className="flex items-center gap-2">
-                {index === 0 ? <Instagram size={18} /> : index === 1 ? <Facebook size={18} /> : <Twitter size={18} />} {social}
-              </p>
-            ))}
-          </div>
+          <h4 className="font-bold text-sm text-amber-100 mb-3">Quick Links</h4>
+          <ul className="space-y-2 text-xs text-amber-100/80">
+            <li><a href="#home" className="hover:text-brand-gold transition-colors">Home</a></li>
+            <li><a href="#shop" className="hover:text-brand-gold transition-colors">Shop</a></li>
+            <li><a href="#why-tena" className="hover:text-brand-gold transition-colors">Why Tena</a></li>
+            <li><a href="#benefits" className="hover:text-brand-gold transition-colors">Benefits</a></li>
+          </ul>
         </div>
+
+        {/* Contact Info */}
+        <div>
+          <h4 className="font-bold text-sm text-amber-100 mb-3">Contact Us</h4>
+          <p className="text-xs text-amber-100/80">Addis Ababa, Ethiopia</p>
+          <p className="text-xs text-amber-100/80 mt-1">Phone: 0960102804</p>
+        </div>
+      </div>
+
+      {/* Developer Credit Bar */}
+      <div className="max-w-7xl mx-auto px-6 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-200/60 gap-3">
+        <p>© {new Date().getFullYear()} Tena Organics. All rights reserved.</p>
+        
+        {/* Web Developer Credit */}
+        <p className="flex items-center gap-2">
+          <span>Developed by</span>
+          <a
+            href="https://www.linkedin.com/in/benyam-tadesse-data"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brand-gold hover:underline transition-colors"
+          >
+            Benyam Tadesse
+          </a>
+          <span>(0911471568)</span>
+        </p>
       </div>
     </footer>
   );

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { Menu, Search, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 
@@ -16,12 +18,29 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-amber-200/50 bg-brand-cream/90 backdrop-blur-xl">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <a href="#home" className="font-serif text-2xl font-bold tracking-tight text-brand-green">
-          Tena Organic Health
-        </a>
+        {/* Brand Logo + Title + Amharic Slogan */}
+        <Link href="#home" className="flex items-center gap-3 group">
+          <Image
+            src="/img/tenalogo.png"
+            alt="Tena Organics Logo"
+            width={48}
+            height={48}
+            className="h-10 w-auto object-contain transition-transform group-hover:scale-105 sm:h-12"
+            priority
+          />
+          
+          <div className="hidden sm:flex flex-col">
+            <span className="font-serif text-xl font-bold leading-tight tracking-tight text-brand-green">
+              Tena Organics
+            </span>
+            <span className="text-[10px] font-medium tracking-wide text-amber-800/80">
+              ንጹህ • ተፈጥሯዊ • ሙሉ ጤና
+            </span>
+          </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden items-center gap-8 lg:flex">
@@ -36,7 +55,7 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
           ))}
         </div>
 
-        {/* Desktop Controls & Enlarged Cart Trigger */}
+        {/* Desktop Controls & Cart Button */}
         <div className="hidden items-center gap-4 lg:flex">
           <button
             aria-label="Search"
@@ -45,7 +64,6 @@ export default function Navbar({ cartCount, onOpenCart }: NavbarProps) {
             <Search size={20} />
           </button>
 
-          {/* Enlarged Interactive Cart Button */}
           <button
             onClick={onOpenCart}
             aria-label="Shopping cart"
