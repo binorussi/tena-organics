@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     category: "herbal-teas",
     tagline: "Rich in antioxidants & Vitamin C",
     benefit: "Lowers blood pressure naturally & aids digestion",
-    price: 1000.00,
+    price: 800.00,
     image: "/img/hibiscus.webp",
     badge: "Best Seller",
   },
@@ -126,7 +126,7 @@ export const PRODUCTS: Product[] = [
     category: "powders",
     tagline: "Golden Anti-Inflammatory Root",
     benefit: "Supports joint health, immunity & natural detox",
-    price: 600.00,
+    price: 400.00,
     image: "/img/turmeric.webp",
   },
   {
